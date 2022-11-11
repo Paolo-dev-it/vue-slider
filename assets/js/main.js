@@ -33,10 +33,12 @@ var app = new Vue({
     timer: function(){
                 setInterval( this.rightDirection, 3000 )
             },
+
+    
   },
 
-  created () {
-            this.timer()
-          },
+//   created () {
+//             this.timer()
+//           },
 })
 
