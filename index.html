@@ -38,11 +38,18 @@
             <div
               class="col-12 justify-content-center align-items-center text-center"
             >
-              <div class="d-flex align-items-center">
-                <i class="fa-solid fa-arrow-left" @click="rightDirection"></i>
+              <div class="d-flex align-items-center justify-content-center">
+                <i
+                  class="fa-solid fa-arrow-left mx-2"
+                  @click="rightDirection"
+                ></i>
 
-                <img class="w-50" :src="images[indice].image" alt="" />
-                <i class="fa-solid fa-arrow-right" @click="rightDirection"></i>
+                <img class="w-75 h-50" :src="images[indice].image" alt="" />
+
+                <i
+                  class="fa-solid fa-arrow-right mx-2"
+                  @click="leftDirection"
+                ></i>
               </div>
             </div>
           </div>

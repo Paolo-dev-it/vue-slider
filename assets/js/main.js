@@ -15,12 +15,28 @@ var app = new Vue({
   },
   methods: {
     rightDirection: function(){
-        if( this.indice >= this.images.length ){
-        return this.indice = 0;
-      } else {
-        return this.indice++;
-      }
-    }
-  }
+        if( this.indice < this.images.length  ){
+         return this.indice++;
+      } 
+       return this.indice = 0
+      
+    },
+
+    leftDirection: function(){
+        if( this.indice > 0 ){
+        return this.indice--;
+      } 
+        return this.indice = this.images.length -1
+      
+    },
+
+    timer: function(){
+                setInterval( this.rightDirection, 3000 )
+            },
+  },
+
+  created () {
+            this.timer()
+          },
 })
 
