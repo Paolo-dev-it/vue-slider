@@ -6,9 +6,9 @@ var app = new Vue({
   el: '#root',
   data: {
     images: [
-          { id: 1, image: 'https://picsum.photos/700/300' },
-          { id: 2, image: 'https://picsum.photos/700/300' },
-          { id: 3, image: 'https://picsum.photos/700/300' },
+          { id: 1, image: '/assets/img/pexels-avinash-patel-544542.jpg' },
+          { id: 2, image: '/assets/img/pexels-cesar-perez-733745.jpg' },
+          { id: 3, image: '/assets/img/pexels-mike-b-244206.jpg' },
     ],
 
     indice: 0,
