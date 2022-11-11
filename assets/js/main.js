@@ -10,12 +10,13 @@ var app = new Vue({
           { id: 2, image: '/assets/img/pexels-cesar-perez-733745.jpg' },
           { id: 3, image: '/assets/img/pexels-mike-b-244206.jpg' },
     ],
-
     indice: 0,
+    
   },
+
   methods: {
     rightDirection: function(){
-        if( this.indice < this.images.length  ){
+        if( this.indice < this.images.length - 1 ){
          return this.indice++;
       } 
        return this.indice = 0
@@ -37,8 +38,8 @@ var app = new Vue({
     
   },
 
-//   created () {
-//             this.timer()
-//           },
+  created () {
+            this.timer()
+          },
 })
 
