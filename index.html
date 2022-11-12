@@ -32,56 +32,60 @@
     <main>
       <div id="root">
         <div
-          class="container w-50 h-25 justify-content-center align-items-center"
+          class="container w-100 h-25 justify-content-center align-items-center"
         >
           <div class="row justify-content-center align-items-center">
             <div
-              class="col-12 justify-content-center align-items-center text-center"
+              class="col-12 justify-content-center align-items-center text-center w-100"
             >
               <div
                 class="d-flex align-items-center justify-content-center w-100"
               >
-                <i
-                  class="fa-solid fa-arrow-left mx-2"
-                  @click="leftDirection"
-                ></i>
+                <img class="dimensionImg" :src="images[indice].image" alt="" />
 
-                <img class="w-100 h-100" :src="images[indice].image" alt="" />
-                <div>
-                  <img src="..." class="img-thumbnail w-25" alt="..." />
-                  <img src="..." class="img-thumbnail" alt="..." />
-                  <img src="..." class="img-thumbnail" alt="..." />
+                <div class="d-flex flex-column">
+                  <i
+                    class="fa-solid fa-arrow-up mx-2"
+                    @click="leftDirection"
+                  ></i>
+                  <img
+                    :src="images[0].image"
+                    class="img-thumbnail dimensionThumb"
+                    alt="..."
+                  />
+                  <img
+                    :src="images[1].image"
+                    class="img-thumbnail dimensionThumb"
+                    alt="..."
+                  />
+                  <img
+                    :src="images[2].image"
+                    class="img-thumbnail dimensionThumb"
+                    alt="..."
+                  />
+                  <i
+                    class="fa-solid fa-arrow-down mx-2"
+                    @click="rightDirection"
+                  ></i>
                 </div>
-
-                <i
-                  class="fa-solid fa-arrow-right mx-2"
-                  @click="rightDirection"
-                ></i>
               </div>
               <div
                 class="nav-buttons d-flex justify-content-center align-items-center py-3 w-100"
               >
                 <button
                   type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="0"
-                  class="active mx-4"
-                  aria-current="true"
-                  aria-label="Slide 1"
+                  class="mx-2 circle"
+                  @click="img0"
                 ></button>
                 <button
                   type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="1"
-                  aria-label="Slide 2"
-                  class="mx-4"
+                  @click="img1"
+                  class="mx-2 circle"
                 ></button>
                 <button
                   type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="2"
-                  aria-label="Slide 3"
-                  class="mx-4"
+                  @click="img2"
+                  class="mx-2 circle"
                 ></button>
               </div>
             </div>

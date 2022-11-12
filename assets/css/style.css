@@ -1,0 +1,16 @@
+.dimensionImg {
+  width: 700px;
+  height: 400px;
+}
+
+.dimensionThumb {
+  height: 120px;
+}
+
+.circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 0;
+  background-color: blue;
+}

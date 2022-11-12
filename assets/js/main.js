@@ -12,6 +12,7 @@ var app = new Vue({
     ],
     indice: 0,
     
+    
   },
 
   methods: {
@@ -31,6 +32,18 @@ var app = new Vue({
       
     },
 
+    img0: function(){
+        return this.indice = 0 ;
+    },
+
+    img1: function(){
+        return this.indice = 1 ;
+    },
+
+    img2: function(){
+        return this.indice = 2 ;
+    },
+
     timer: function(){
                 setInterval( this.rightDirection, 3000 )
             },
@@ -38,8 +51,8 @@ var app = new Vue({
     
   },
 
-  created () {
-            this.timer()
-          },
+//   created () {
+//             this.timer()
+//           },
 })
 
