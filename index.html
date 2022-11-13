@@ -32,68 +32,68 @@
     <main>
       <div id="root">
         <div
-          class="container d-flex w-100 h-25 justify-content-center align-items-center my-5"
+          class="justify-content-center align-items-center text-center w-100"
         >
-          <div class="justify-content-center align-items-center">
-            <div
-              class="justify-content-center align-items-center text-center w-100"
-            >
+          <div class="d-flex align-items-center justify-content-center w-100">
+            <!-- Contenitore immagine pricipale -->
+            <div>
+              <!-- Immagine pricipale -->
+              <img
+                class="dimensionImg my-3"
+                :src="images[indice].image"
+                alt=""
+              />
+              <!-- Contenitore 3 pallini -->
               <div
-                class="d-flex align-items-center justify-content-center w-100"
+                class="nav-buttons d-flex justify-content-center align-items-center w-100 text-center"
               >
-                <div>
-                  <img
-                    class="dimensionImg"
-                    :src="images[indice].image"
-                    alt=""
-                  />
-
-                  <div
-                    class="nav-buttons d-flex justify-content-center align-items-center py-3 w-100 text-center"
-                  >
-                    <button
-                      type="button"
-                      class="mx-2 circle"
-                      @click="img0"
-                    ></button>
-                    <button
-                      type="button"
-                      @click="img1"
-                      class="mx-2 circle"
-                    ></button>
-                    <button
-                      type="button"
-                      @click="img2"
-                      class="mx-2 circle"
-                    ></button>
-                  </div>
-                </div>
-                <div class="d-flex flex-column">
-                  <i
-                    class="fa-solid fa-arrow-up mx-2"
-                    @click="leftDirection"
-                  ></i>
-                  <img
-                    :src="images[0].image"
-                    class="img-thumbnail dimensionThumb border-0"
-                    alt="..."
-                  />
-                  <img
-                    :src="images[1].image"
-                    class="img-thumbnail dimensionThumb border-0"
-                    alt="..."
-                  />
-                  <img
-                    :src="images[2].image"
-                    class="img-thumbnail dimensionThumb border-0"
-                    alt="..."
-                  />
-                  <i
-                    class="fa-solid fa-arrow-down mx-2"
-                    @click="rightDirection"
-                  ></i>
-                </div>
+                <!-- Pallino 1 che al click seleziona l'immagine in pos 0 -->
+                <button
+                  type="button"
+                  class="mx-2 circle"
+                  @click="img0"
+                ></button>
+                <!-- Pallino 2 che al click seleziona l'immagine in pos 1 -->
+                <button
+                  type="button"
+                  @click="img1"
+                  class="mx-2 circle"
+                ></button>
+                <!-- Pallino 3 che al click seleziona l'immagine in pos 2 -->
+                <button
+                  type="button"
+                  @click="img2"
+                  class="mx-2 circle"
+                ></button>
               </div>
+            </div>
+            <!-- Contenitore principale Thumbnails -->
+            <div class="d-flex flex-column">
+              <!-- Icona freccia in alto -->
+              <i class="fa-solid fa-arrow-up mx-2" @click="leftDirection"></i>
+              <!-- Immagine thumbnails 1 -->
+              <img
+                :src="images[0].image"
+                class="img-thumbnail dimensionThumb"
+                alt="..."
+              />
+              <!-- Immagine thumbnails 2 -->
+              <img
+                :src="images[1].image"
+                class="img-thumbnail dimensionThumb"
+                alt="..."
+              />
+              <!-- Immagine thumbnails 3 -->
+              <img
+                :src="images[2].image"
+                class="img-thumbnail dimensionThumb"
+                alt="..."
+              />
+              <!-- Icona freccia in basso -->
+              <i
+                class="fa-solid fa-arrow-down mx-2"
+                @click="rightDirection"
+              ></i>
             </div>
           </div>
         </div>

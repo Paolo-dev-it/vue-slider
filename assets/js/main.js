@@ -11,48 +11,46 @@ var app = new Vue({
           { id: 3, image: '/assets/img/pexels-mike-b-244206.jpg' },
     ],
     indice: 0,
-    
+
+    activeClass: 'styleCorrect',
+    errorClass: 'styleError',
     
   },
 
   methods: {
-    rightDirection: function(){
+    rightDirection: function(){ //Funzione freccia in giù
         if( this.indice < this.images.length - 1 ){
          return this.indice++;
       } 
        return this.indice = 0
-      
     },
 
-    leftDirection: function(){
+    leftDirection: function(){ //Funzione freccia in su
         if( this.indice > 0 ){
         return this.indice--;
       } 
         return this.indice = this.images.length -1
-      
     },
 
-    img0: function(){
-        return this.indice = 0 ;
+    img0: function(){ //Funzione al click del pallino vado all'immagine
+        return this.indice = 0;
     },
 
-    img1: function(){
-        return this.indice = 1 ;
+    img1: function(){ //Funzione al click del pallino vado all'immagine
+        return this.indice = 1;
     },
 
-    img2: function(){
-        return this.indice = 2 ;
+    img2: function(){ //Funzione al click del pallino vado all'immagine
+        return this.indice = 2;
     },
 
     timer: function(){
                 setInterval( this.rightDirection, 3000 )
             },
-
-    
   },
 
-//   created () {
-//             this.timer()
-//           },
+  created () { //Funzione che ogni 3 secondi cambia l'immagine
+            this.timer()
+          },
 })
 

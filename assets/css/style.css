@@ -14,3 +14,11 @@
   border: 0;
   background-color: blue;
 }
+
+.styleCorrect {
+  border: 2px solid green;
+}
+
+.styleError {
+  border: 2px solid red;
+}
